@@ -6,7 +6,19 @@ using WeatherStation.Weather.Interfaces;
 
 public class WeatherData<T>
 {
-    IList<IDisplay<T>> subscribers = [];
+
+    IList<IDisplay<T>> subscribers = new List<IDisplay<T>>();
+
+    public T _value{
+        get{
+            return _value;
+        }
+
+        set{
+            _value = value;
+            Notify(value);
+        }
+    }
 
     public void Subscribe(IDisplay<T> subscriber){
          if(!subscribers.Contains(subscriber))
@@ -16,6 +28,12 @@ public class WeatherData<T>
     public void UnSubscribe(IDisplay<T> subscriber){
          if(subscribers.Contains(subscriber))
              subscribers.Remove(subscriber);
+    }
+
+    private void Notify(T message){
+        foreach(var sub in subscribers){
+            sub.Display();
+        }
     }
 
 }
