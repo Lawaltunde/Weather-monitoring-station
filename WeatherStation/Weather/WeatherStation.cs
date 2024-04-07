@@ -1,6 +1,6 @@
 namespace WeatherStation.Weather;
 using Weather.Interfaces;
-public class WeatherStation
+public static class WeatherStation_
 {
     public static IDisplay<string> CreateDisplay(string command){
         switch(command){
