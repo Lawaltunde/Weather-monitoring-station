@@ -1,7 +1,7 @@
 ﻿namespace WeatherStation.Weather;
 
 using System.Collections;
-using WeatherStation.Weather.Interfaces;
+using Weather.Interfaces;
 
 
 public class WeatherData<T>

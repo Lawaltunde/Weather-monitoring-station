@@ -1,6 +1,8 @@
-using WeatherStation.Weather.Interfaces;
-
 namespace WeatherStation.Weather;
+
+using Weather.Interfaces;
+
+
 
 public class StatisticsDisplay : IDisplay<string>
 {
