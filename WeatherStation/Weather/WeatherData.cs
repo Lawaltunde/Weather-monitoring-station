@@ -32,7 +32,7 @@ public class WeatherData<T>
 
     private void Notify(T message){
         foreach(var sub in subscribers){
-            sub.Display();
+            sub.Display(message);
         }
     }
 
