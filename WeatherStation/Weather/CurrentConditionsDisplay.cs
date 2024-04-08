@@ -10,8 +10,10 @@ public class CurrentConditionsDisplay : IDisplay<string>
     private double output;
     private DateTime dateTime = new DateTime();
     public  void Display(string param){
-        Console.WriteLine("Date: "+ dateTime.Date);
-        Console.WriteLine("Time: "+ dateTime.TimeOfDay);
+        Console.WriteLine("========================================");
+
+        Console.WriteLine("Today's Date: "+ dateTime.Date);
+        Console.WriteLine("Current Time: "+ dateTime.TimeOfDay);
 
         if(double.TryParse(param, out output))
         {
@@ -33,11 +35,15 @@ public class CurrentConditionsDisplay : IDisplay<string>
             case <=35.0: 
                  Console.WriteLine("{0}°C: Walm", output);
                  break;
+            case <=70.0: 
+                 Console.WriteLine("{0}°C: Extremely warm", output);
+                 break;
             default:
                 throw new Exception("wrong value inserted");
         };
         }
 
+        Console.WriteLine("========================================");
     }
 
 }
