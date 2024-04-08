@@ -5,7 +5,7 @@ Console.WriteLine("Please enter your command (CurrentConditionsDisplay, Statisti
 
     var obs1 = Console.ReadLine()?? "";
     weatherData.Subscribe(WeatherStation_.CreateDisplay(obs1));
-    weatherData._value = Console.ReadLine()?? "";
+    weatherData.Value = Console.ReadLine()?? "";
     //weatherData.Subscribe(obs1);
 
 

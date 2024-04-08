@@ -6,10 +6,10 @@ using Weather.Interfaces;
 
 public class WeatherData<T>
 {
-
+    private T? _value;
     IList<IDisplay<T>> subscribers = new List<IDisplay<T>>();
 
-    public T _value{
+    public T? Value{
         get{
             return _value;
         }
@@ -30,7 +30,7 @@ public class WeatherData<T>
              subscribers.Remove(subscriber);
     }
 
-    private void Notify(T message){
+    private void Notify(T? message){
         foreach(var sub in subscribers){
             sub.Display(message);
         }
