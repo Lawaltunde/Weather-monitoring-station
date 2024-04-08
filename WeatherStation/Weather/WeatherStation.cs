@@ -1,5 +1,9 @@
 namespace WeatherStation.Weather;
 using Weather.Interfaces;
+
+/// <summary>
+///  This is a factory for creating different types of displays.
+/// </summary>
 public static class WeatherStation_
 {
     public static IDisplay<string> CreateDisplay(string command){

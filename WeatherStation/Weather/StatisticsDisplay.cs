@@ -1,6 +1,9 @@
 namespace WeatherStation.Weather;
-
 using Weather.Interfaces;
+
+/// <summary>
+/// This is another observer. It displays weather statistics (like average, max, and min temperatures).
+/// </summary>
 
 
 

@@ -1,6 +1,10 @@
 namespace WeatherStation.Weather;
 using Weather.Interfaces;
 
+/// <summary>
+/// CurrentConditionsDisplay This is one of the observers. It displays the current weather conditions. It’s also a decorator that can add additional information (like date and time) to the display.
+/// </summary>
+
 public class CurrentConditionsDisplay : IDisplay<string>
 {
     private double output;

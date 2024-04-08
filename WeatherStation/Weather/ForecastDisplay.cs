@@ -1,6 +1,9 @@
 namespace WeatherStation.Weather;
 using Weather.Interfaces;
 
+/// <summary>
+/// This is yet another observer. It displays a weather forecast based on the current weather data.
+/// </summary>
 public class ForecastDisplay : IDisplay<string>
 {
     private double output;

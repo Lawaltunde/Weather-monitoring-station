@@ -3,6 +3,11 @@
 using System.Collections;
 using Weather.Interfaces;
 
+/// <summary>
+/// This is the subject of the Observer pattern and also a Singleton. It collects weather data from a weather station (for simplicity, you can simulate this by randomly generating data). When the data changes, it notifies all observers.
+/// </summary>
+/// <typeparam name="T">Any type</typeparam>
+
 
 public class WeatherData<T>
 {
